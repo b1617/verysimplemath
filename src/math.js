@@ -3,15 +3,18 @@ const add = (...nums) => {
 };
 
 const substract = (...nums) => {
-  let res = 0;
-  for (let i = 0; i < nums.length; ++i) {
-    if (i == 0) {
-      res += nums[i];
-    } else {
-      res -= nums[i];
-    }
-  }
-  return res;
+  if (nums.length === 0) return 0;
+  return nums.reduce((total, num) => total - num, nums[0] * 2);
 };
 
-module.exports = { add, substract };
+const multiply = (...nums) => {
+  if (nums.length == 0) return 0;
+  return nums.reduce((total, num) => total * num, 1);
+};
+
+const divide = (...nums) => {
+  if (nums.length == 0 || nums.includes(0)) return 0;
+  return nums.reduce((total, num) => total / num, nums[0] * nums[0]);
+};
+
+module.exports = { add, substract, multiply, divide };
