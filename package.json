@@ -1,13 +1,14 @@
 {
   "name": "verysimplemath",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Very simple math",
   "main": "src/math.js",
   "scripts": {
     "test": "jest --coverage"
   },
   "keywords": [
-    "npm", "math"
+    "npm",
+    "math"
   ],
   "author": "Sattia Dhinesh",
   "license": "ISC",
@@ -15,7 +16,7 @@
     "jest": "^26.6.3"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/nesdii/verysimplemath.git"
+    "type": "git",
+    "url": "https://github.com/nesdii/verysimplemath.git"
   }
 }
