@@ -129,4 +129,10 @@ describe('intersection', () => {
   it('shoud intersection n array', () => {
     expect(math.intersection([1, 2, 3], [2, 4], [4, 6, 2])).toEqual([2]);
   });
+  it('shoud intersection n postive and negative array', () => {
+    expect(math.intersection([1, 2, 3, -4], [2, -4], [-4, 6, 2])).toEqual([
+      2,
+      -4
+    ]);
+  });
 });
