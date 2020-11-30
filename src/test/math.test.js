@@ -115,3 +115,18 @@ describe('divide', () => {
     expect(math.divide(-8, 4)).toBe(-2);
   });
 });
+
+describe('intersection', () => {
+  it('should return empty array if no args', () => {
+    expect(math.intersection()).toEqual([]);
+  });
+  it('should return array if one arg', () => {
+    expect(math.intersection([1])).toEqual([1]);
+  });
+  it('should intersection two array', () => {
+    expect(math.intersection([1, 2, 3], [2, 3])).toEqual([2, 3]);
+  });
+  it('shoud intersection n array', () => {
+    expect(math.intersection([1, 2, 3], [2, 4], [4, 6, 2])).toEqual([2]);
+  });
+});
