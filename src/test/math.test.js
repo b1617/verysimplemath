@@ -136,3 +136,5 @@ describe('intersection', () => {
     ]);
   });
 });
+
+math.intersection()
