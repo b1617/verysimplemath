@@ -39,8 +39,8 @@ const divide = (...nums) => {
  */
 const intersection = (...nums) => {
   let res = [];
-  let frequency = nums.reduce((map, nums) => {
-    for (let num of nums) {
+  let frequency = nums.reduce((map, numbers) => {
+    for (let num of numbers) {
       if (map.get(num)) {
         map.set(num, map.get(num) + 1);
       } else {
@@ -58,4 +58,22 @@ const intersection = (...nums) => {
   return res;
 };
 
-module.exports = { add, substract, multiply, divide, intersection };
+/**
+ * @param  {...number} nums
+ * @return {number[]}
+ */
+const union = (...nums) => {
+  if (!nums) return [];
+  let items = nums.reduce((set, numbers) => {
+    for (let n of numbers) {
+      if (!set.has(n)) {
+        set.add(n);
+      }
+    }
+    return set;
+  }, new Set());
+
+  return [...items];
+};
+
+module.exports = { add, substract, multiply, divide, intersection, union };

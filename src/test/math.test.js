@@ -137,4 +137,24 @@ describe('intersection', () => {
   });
 });
 
-math.intersection()
+describe('union', () => {
+  it('should return empty if no args', () => {
+    expect(math.union()).toEqual([]);
+  });
+
+  it('should return array if one arg', () => {
+    expect(math.union([1])).toEqual([1]);
+  });
+
+  it('should union two array', () => {
+    expect(math.union([1, 2], [2, 4])).toEqual([1, 2, 4]);
+  });
+
+  it('should union n array', () => {
+    expect(math.union([1, 2], [3, 4], [5, 5])).toEqual([1, 2, 3, 4, 5]);
+  });
+
+  it('should union postive and negative array', () => {
+    expect(math.union([1, 2], [-3, 4], [5, -5])).toEqual([1, 2, -3, 4, 5, -5]);
+  });
+});
