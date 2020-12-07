@@ -1,4 +1,4 @@
-const math = require('../math');
+const math = require('..');
 
 describe('add', () => {
   it('should add two number', () => {
